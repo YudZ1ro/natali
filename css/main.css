@@ -37,7 +37,7 @@ a {
 /**---------------------------header---------------------------------*/
 .header {
   background: #263a49;
-  background-image: url("natali/img/bg-header.jpg");
+  background-image: url("img/bg-header.jpg");
   background-repeat: no-repeat; /*что бы фон не дублировался*/
   background-position: center;
   background-size: cover; /*дает команду ресунку растянутся по блоку*/
