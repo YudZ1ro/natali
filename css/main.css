@@ -1,0 +1,244 @@
+html,
+body {
+  margin: 0;
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 16px;
+  line-height: 35px;
+  min-width: 280px;
+}
+img {
+  display: inline-block;
+}
+a {
+  transition: 0.2s ease-out; /**кнопка плавно меняет цвет*/
+}
+* {
+  box-sizing: border-box;
+}
+/**---------------------------grid---------------------------------*/
+.row {
+  width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.col-4 {
+  width: 360px;
+  margin-right: 20px;
+  float: left;
+}
+.col-4 last-child {
+  margin-right: 0px;
+}
+/**---------------------------header---------------------------------*/
+.header {
+  background: #263a49;
+  background-image: url("natali/img/bg-header.jpg");
+  background-repeat: no-repeat; /*что бы фон не дублировался*/
+  background-position: center;
+  background-size: cover; /*дает команду ресунку растянутся по блоку*/
+  height: 100vh;
+  min-height: 400px;
+  opacity: 0.9;
+  color: white;
+  text-align: center; /*делает текст по центру*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /*выставляет по центру блока*/
+  position: relative;
+}
+.header-title {
+  font-family: "Merriweather", serif;
+  font-size: 56px;
+  margin-bottom: 30px;
+  margin-top: -50px; /*двигает текст вверх*/
+}
+.header-slogan {
+  font-size: 28px;
+  line-height: 42px;
+}
+.header-arrow {
+  font-size: 48px;
+  width: 60px;
+  height: 50px;
+  margin-left: -30px;
+  position: absolute;
+  bottom: 50px;
+}
+/**--------------------------portfolio---------------------------*/
+.title {
+  font-size: 46px;
+  margin-bottom: 60px;
+  font-family: "Merriweather", serif;
+  text-align: center;
+}
+.portfolio-item--img {
+  margin-bottom: 17px;
+}
+.portfolio-item--img img {
+  max-width: 100%;
+  height: auto;
+}
+.portfolio-item--title {
+  font-size: 24px;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+.portfolio-item--title a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid black;
+}
+.portfolio-item--title a:hover {
+  color: palevioletred;
+  border-color: rgba(0, 82, 194, 0.3);
+}
+.portfolio {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+.portfolio-item {
+  margin-bottom: 20px;
+  /*text-align: center;*/ /*! test*/
+}
+.portfolio-item--text p {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  /*text-align: center;*/ /*! test*/
+}
+/**--------------------singl-page--------------------*/
+.portfolio-1page {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.portfolio-1page img {
+  margin-bottom: 50px;
+  max-width: 100%;
+  height: auto;
+}
+.button-back {
+  border: 2px solid palevioletred;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  display: inline-block;
+  border-radius: 50px;
+  text-decoration: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 23px;
+  padding-right: 23px;
+  margin-bottom: 13px;
+  transition: 0.2s ease-out; /**кнопка плавно меняет цвет*/
+}
+a.button-back {
+  color: palevioletred;
+}
+.button-back:hover {
+  color: white;
+  background-color: palevioletred;
+}
+
+/**--------------------FOOTER--------------------*/
+.footer {
+  background-color: palevioletred;
+  color: #ffffff;
+  padding-top: 90px;
+  padding-bottom: 190;
+}
+.footer p {
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+p.footer-name {
+  font-size: 28px;
+  margin-bottom: 10px;
+  line-height: normal;
+  font-family: "Merriweather", serif;
+}
+p.footer-social {
+  color: white;
+}
+p.footer-social-icons {
+  color: white;
+  font-size: 32px;
+}
+p.footer-social-icons a {
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+}
+p.footer-social-icons a:last-child {
+  margin-right: 0;
+}
+p.footer-social-icons a:hover {
+  color: gold;
+}
+.button {
+  border: 2px solid #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  display: inline-block;
+  border-radius: 50px;
+  text-decoration: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 23px;
+  padding-right: 23px;
+  margin-bottom: 13px;
+  transition: 0.2s ease-out; /**кнопка плавно меняет цвет*/
+}
+a.button {
+  color: white;
+}
+.button:hover {
+  color: #061634;
+  background-color: white;
+}
+/**--------------------MEDIA--------------------*/
+/**При ширене экрана в 1160px и менее будет выполнин медиа запрос*/
+@media (max-width: 1160px) {
+  .container {
+    width: 100%;
+  }
+  .col-4 {
+    width: 100%;
+    margin: 0; /* отступ справа обнулили*/
+    margin-bottom: 30px; /*растояние между текстом и картинками*/
+    /*если расширение 320px*/
+    padding-left: 15px;
+    padding-right: 15px; /*отступы справа и слева*/
+    /*text-align: center;*/ /**текст по центру и картинки*/
+  }
+  .header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .header-title {
+    font-size: 38px;
+    line-height: 48px;
+    margin-bottom: 15px;
+  }
+  .header-slogan {
+    font-size: 22px;
+    line-height: 38px;
+  }
+  .portfolio {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  .title {
+    font-size: 36px;
+  }
+  .footer {
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
+}
